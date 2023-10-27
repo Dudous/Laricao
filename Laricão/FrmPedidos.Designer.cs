@@ -66,7 +66,7 @@
             this.btn_voltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_voltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_voltar.Image = global::Laricão.Properties.Resources.burger__1_2;
+            this.btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("btn_voltar.Image")));
             this.btn_voltar.Location = new System.Drawing.Point(0, 0);
             this.btn_voltar.Margin = new System.Windows.Forms.Padding(0);
             this.btn_voltar.Name = "btn_voltar";

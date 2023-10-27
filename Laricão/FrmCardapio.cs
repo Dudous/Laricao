@@ -29,9 +29,9 @@ namespace Laricão
 
         public FrmCardapio(int idusuario, int perfil)
         {
+            InitializeComponent();
             perfiluser = perfil;
             id = idusuario;
-            InitializeComponent();
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace Laricão
         }
         private void ListarProduto(string ctg)
         {
-            pfc.AddFontFile("F:\\Laricao\\img\\Gluten.ttf");
+            pfc.AddFontFile("E:\\Laricao\\img\\Gluten.ttf");
 
             Font padrao = new Font(pfc.Families[0], 16, FontStyle.Regular);
 

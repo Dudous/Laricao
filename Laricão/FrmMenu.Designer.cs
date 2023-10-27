@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -47,7 +46,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button4);
@@ -57,26 +55,20 @@
             this.panel1.Size = new System.Drawing.Size(1043, 65);
             this.panel1.TabIndex = 0;
             // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(219, 65);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(621, 431);
-            this.panel4.TabIndex = 2;
-            // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.Image = global::Laricão.Properties.Resources.x1;
-            this.button1.Location = new System.Drawing.Point(991, 12);
+            this.button1.Location = new System.Drawing.Point(996, 18);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.Size = new System.Drawing.Size(35, 30);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -103,7 +95,7 @@
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = global::Laricão.Properties.Resources.burger__1_;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(3, 1);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(1040, 62);
@@ -134,7 +126,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::Laricão.Properties.Resources.logout1;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(9, 445);
             this.button5.Name = "button5";
@@ -153,7 +145,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::Laricão.Properties.Resources.vista_lateral_vazia_do_carrinho_de_compras;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(9, 81);
             this.button3.Name = "button3";
@@ -172,7 +164,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Laricão.Properties.Resources.notes;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(9, 137);
             this.button2.Name = "button2";
@@ -191,7 +183,7 @@
             this.btn_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.btn_clientes.ForeColor = System.Drawing.Color.White;
-            this.btn_clientes.Image = global::Laricão.Properties.Resources.clientes;
+            this.btn_clientes.Image = ((System.Drawing.Image)(resources.GetObject("btn_clientes.Image")));
             this.btn_clientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_clientes.Location = new System.Drawing.Point(9, 194);
             this.btn_clientes.Name = "btn_clientes";
@@ -211,7 +203,7 @@
             this.btn_cardapio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cardapio.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.btn_cardapio.ForeColor = System.Drawing.Color.White;
-            this.btn_cardapio.Image = global::Laricão.Properties.Resources.cardapio;
+            this.btn_cardapio.Image = ((System.Drawing.Image)(resources.GetObject("btn_cardapio.Image")));
             this.btn_cardapio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_cardapio.Location = new System.Drawing.Point(9, 17);
             this.btn_cardapio.Name = "btn_cardapio";
@@ -225,6 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1043, 577);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -252,7 +245,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button5;
     }
 }

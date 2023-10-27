@@ -223,20 +223,20 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Laricão_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -257,22 +257,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\burger %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\amburgelogin.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\%27X%27.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\exit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cardapio.png" />
@@ -281,55 +272,13 @@
     <None Include="Resources\clientes.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\combo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\combo %282%29.jfif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\americano.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\fome.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cupom.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cupom1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vista-lateral-vazia-do-carrinho-de-compras.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logomarca.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\burger %281%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vista-lateral-vazia-do-carrinho-de-compras1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\burger %281%292.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\website.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\notes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\carrinho.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logout.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logout1.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -349,12 +298,9 @@
   <ItemGroup>
     <Content Include="burger.ico" />
     <None Include="Resources\LARICÃO.png" />
-    <None Include="Resources\banner3.png" />
-    <None Include="Resources\hamburguerCadastro.jpg" />
     <None Include="Resources\trash-bin.png" />
     <None Include="Resources\reload.png" />
     <None Include="Resources\register.png" />
-    <None Include="Resources\loupe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

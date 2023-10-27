@@ -276,3 +276,17 @@ C:\Users\Eduar\OneDrive\Área de Trabalho\Laricao\Modelo\obj\Debug\Modelo.csproj
 C:\Users\Eduar\OneDrive\Área de Trabalho\Laricao\Modelo\obj\Debug\Modelo.csproj.CopyComplete
 C:\Users\Eduar\OneDrive\Área de Trabalho\Laricao\Modelo\obj\Debug\Modelo.dll
 C:\Users\Eduar\OneDrive\Área de Trabalho\Laricao\Modelo\obj\Debug\Modelo.pdb
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\Correios.dll
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\PdfSharp.Charting.dll
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\PdfSharp.dll
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\System.Text.Json.dll
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\System.ValueTuple.dll
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\Correios.pdb
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\PdfSharp.xml
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\PdfSharp.Charting.xml
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\System.Text.Json.xml
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\System.ValueTuple.xml
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\aluno\Desktop\Laricao\Modelo\bin\Debug\de\PdfSharp.Charting.resources.dll
