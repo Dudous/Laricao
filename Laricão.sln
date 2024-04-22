@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controle", "Controle\Contro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{496C8965-A3E3-4057-964F-B6DED90D4445}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Laricão", "Setup\Laricão\Laricão.vdproj", "{097F72B4-0932-4305-86B2-F095A4F534F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{496C8965-A3E3-4057-964F-B6DED90D4445}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{496C8965-A3E3-4057-964F-B6DED90D4445}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{496C8965-A3E3-4057-964F-B6DED90D4445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{097F72B4-0932-4305-86B2-F095A4F534F1}.Debug|Any CPU.ActiveCfg = Debug
+		{097F72B4-0932-4305-86B2-F095A4F534F1}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

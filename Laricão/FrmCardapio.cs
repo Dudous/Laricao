@@ -20,25 +20,23 @@ namespace Laricão
     public partial class FrmCardapio : Form
     {
         int perfiluser;
-        int id;
         Conexao con = new Conexao();
         ControleProduto controleProduto = new ControleProduto();
         PrivateFontCollection pfc = new PrivateFontCollection();
         DataTable dt = new DataTable();
-        string table = "select *from amburge order by id asc";
+        string table = "select *from amburge where status = 1 order by id asc";
 
-        public FrmCardapio(int idusuario, int perfil)
+        public FrmCardapio()
         {
             InitializeComponent();
-            perfiluser = perfil;
-            id = idusuario;
+            perfiluser = UsuarioControle.perfil;
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja mesmo voltar ao menu?", "Laricão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                FrmMenu Menu = new FrmMenu(id, perfiluser);
+                FrmMenu Menu = new FrmMenu();
 
                 this.Hide();
                 Menu.ShowDialog();
@@ -51,6 +49,7 @@ namespace Laricão
         }
         private void ListarProduto(string ctg)
         {
+            // define a fonte dos itens
             pfc.AddFontFile("E:\\Laricao\\img\\Gluten.ttf");
 
             Font padrao = new Font(pfc.Families[0], 16, FontStyle.Regular);
@@ -62,13 +61,13 @@ namespace Laricão
             btnsbm.Font = padrao;
             dt = con.ObterDados(ctg);
             int registros;
-            int x = 0;
-            int y = 0;
+            int x = 25;
+            int y = 10;
             flowLayoutPanel1.Controls.Clear();
 
-            for (registros = 1; registros < dt.Rows.Count; registros++)
+            for (registros = 1; registros < dt.Rows.Count; registros++) // Roda uma vez para cada item no cardápio
             {
-                Panel produto = new Panel();
+                Panel produto = new Panel(); // cria o Panel do produto
                 string idproduto = dt.Rows[registros][0].ToString();
                 produto.Controls.Clear();
                 produto.BorderStyle = BorderStyle.FixedSingle;
@@ -77,7 +76,7 @@ namespace Laricão
                 produto.Width = 220;
                 produto.BackColor = Color.White;
 
-                PictureBox foto = new PictureBox();
+                PictureBox foto = new PictureBox(); // configura a foto do produto
                 foto.Location = new Point(0, 0);
                 foto.SizeMode = PictureBoxSizeMode.StretchImage;
                 foto.Name = "foto";
@@ -85,21 +84,20 @@ namespace Laricão
                 foto.Height = 220;
                 foto.Width = 220;
 
-                Label preco = new Label();
+                Label preco = new Label(); // configura o texto de preço
                 preco.Name = "preco";
                 preco.Text = "R$" + dt.Rows[registros][2].ToString();
                 preco.Location = new Point(20, 270);
                 preco.Font = new Font("Arial", 9, FontStyle.Regular);
 
-                Label descproduto = new Label();
+                Label descproduto = new Label(); // configura o texto de título do produto
                 descproduto.Name = "nome";
                 descproduto.Font = new Font(pfc.Families[0], 12, FontStyle.Bold);
                 descproduto.Text = dt.Rows[registros][1].ToString();
                 descproduto.Width = Width;
                 descproduto.Location = new Point(20, 235);
 
-                //adicionando no painel produto
-                Button registrar = new Button();
+                Button registrar = new Button(); // configura o botão de 'Adicionar ao carrinho'
                 registrar.Name = "Adicionar";
                 registrar.Text = "Adicionar ao Carrinho";
                 registrar.Font = new Font("Arial", 8, FontStyle.Bold);
@@ -107,7 +105,7 @@ namespace Laricão
                 registrar.Location = new Point(20, 295);
                 registrar.Height = 35;
                 registrar.Width = 180;
-                registrar.BackColor = Color.RoyalBlue;
+                registrar.BackColor = Color.FromArgb(151, 143, 255);
                 registrar.FlatStyle = FlatStyle.Flat;
                 registrar.ForeColor = Color.White;
                 
@@ -121,7 +119,7 @@ namespace Laricão
 
                 registrar.Region = new Region(path);
 
-
+                // adiciona os items ao Panel produto
                 produto.Controls.Add(descproduto);
                 produto.Controls.Add(preco);
                 produto.Controls.Add(foto);
@@ -131,29 +129,19 @@ namespace Laricão
                 flowLayoutPanel1.Controls.Add(produto);
                 //somando 100 a y
                 x += 235;
-                if (registros %4 == 0)
+                if (registros %5 == 0)
                 {
-                    x = 0;
+                    x = 25;
                     y += 350;
                 }
             }
         }
-        private void QtdeLeave(object sender, EventArgs e, string qtde, int qtdeproduto)
-        {
-            if (!string.IsNullOrEmpty(qtde))
-            {
-                if (Convert.ToInt32(qtde) > qtdeproduto || Convert.ToInt32(qtde) < 1)
-                {
-                    MessageBox.Show("Quantidade indisponível", "Alerta");
-                }
-            }
-        }
-        private void selecionarClick(object sender, EventArgs e, int idperfil, int id)
+        private void selecionarClick(object sender, EventArgs e, int idperfil, int id) // Botão 'Adicionar' produto ao carrinho
         {
             List<int> val = con.Validacao("Select * from carrinho");
-            if (!val.Contains(id))
+            if (!val.Contains(id)) // valida se o produto já não está no carrinho
             {
-                if (controleProduto.CadastrarCart(id))
+                if (controleProduto.CadastrarCart(id)) // chama a função que adiciona o produto ao carrinho
                     MessageBox.Show("Produto Adicionado ao Carrinho");
                 else
                     MessageBox.Show("Carrinho Cheio!");
@@ -164,41 +152,35 @@ namespace Laricão
             }
         }
 
+        // filtros de produtos
         private void btntodes_Click(object sender, EventArgs e)
         {
-            table = "select *from amburge order by id asc";
+            table = "select *from amburge where status = 1 order by id asc";
             ListarProduto(table);
         }
 
         private void btnamburge_Click(object sender, EventArgs e)
         {
-              table = "select *from amburge where categoria = 'Hamburge'";
+              table = "select *from amburge where status = 1 and categoria = 1 or categoria = 0 order by id asc";
               ListarProduto(table);
         }
 
         private void btnsuco_Click(object sender, EventArgs e)
         {
-            table = "select *from amburge where categoria = 'Bebidas'";
+            table = "select *from amburge where status = 1 and categoria = 2 or categoria = 0 order by id asc";
             ListarProduto(table);
         }
 
         private void btnporcao_Click(object sender, EventArgs e)
         {
-            table = "select *from amburge where categoria = 'Porções'";
+            table = "select *from amburge where status = 1 and categoria = 3 or categoria = 0 order by id asc";
             ListarProduto(table);
         }
 
         private void btnsbm_Click(object sender, EventArgs e)
         {
-            table = "select *from amburge where categoria = 'Sobremesas'";
+            table = "select *from amburge where status = 1 and categoria = 4 or categoria = 0 order by id asc";
             ListarProduto(table);
-        }
-
-        private void btnCardapio_Click(object sender, EventArgs e)
-        {
-            FrmCarrinho carrinho = new FrmCarrinho(id, perfiluser);
-            this.Hide();
-            carrinho.Show();
         }
     }
 }

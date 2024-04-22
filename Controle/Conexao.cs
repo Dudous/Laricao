@@ -3,8 +3,10 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Text;
+using System.Windows.Forms;
 
 
 namespace Controle
@@ -25,25 +27,22 @@ namespace Controle
             MySqlConnection conexao = new MySqlConnection(StrCon);
             return conexao;
         }
-        public DataTable ObterDados(string sql)
+        public DataTable ObterDados(string sql) // Popula uma tabela com dados
         {
-            //crio uma nova tabela de dados
+            //cria uma nova tabela de dados
             DataTable dt = new DataTable();
-            //conn é a conexão com o banco de dados
             MySqlConnection conn = GetConexao();
-            conn.Open();//abre o banco de dados
-            //preparo o comando sql
-            MySqlCommand sqlCon = new MySqlCommand(sql, conn);
-            //tipo de instrução texto
+            conn.Open(); //Abre a Conexão
+            MySqlCommand sqlCon = new MySqlCommand(sql, conn); //Cria uma linha de Comando SQL
             sqlCon.CommandType = System.Data.CommandType.Text;
             sqlCon.CommandText = sql;
-            //irá montar as informações da consulta
-            MySqlDataAdapter dados = new MySqlDataAdapter(sqlCon);
+            MySqlDataAdapter dados = new MySqlDataAdapter(sqlCon); //Monta as informações da consulta
             dados.Fill(dt);
             conn.Close();
             return dt;
         }
-        public string getMD5Hash(string senha)
+
+        public string getMD5Hash(string senha) // Criptografa a Senha
         {
             System.Security.Cryptography.MD5 mD5 = System.Security.Cryptography.MD5.Create();
             byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(senha);
@@ -55,27 +54,27 @@ namespace Controle
             }
             return sb.ToString();
         }
+
         public string recuperaremail(string login)
-        { //testar a recuperacao
+        {
             try
             {
                 DataTable dt = new DataTable();
-                string msg = null;//validação da informação
+                string msg = null;
                 string senhanova;//guarda a senha gerada
                 bool confirmar;//guarda o resultado do editar
                 if (login == null)
-                {//valido o preenchimento
-                    msg = "login está vazio";
+                {//valida o preenchimento do campo 'login'
+                    msg = "Preencha o campo 'Login'";
                 }
                 else
                 {
-
                     //abrir o BD
                     con = GetConexao();
                     con.Open();
-                    dt = ObterDados("select * from usuario where nome='" + login + "'");
+                    dt = ObterDados("select * from usuario where email ='" + login + "'"); // Obtém os dados do usuário
 
-                    if (dt.Rows.Count > 0)
+                    if (dt.Rows.Count > 0) // Se o Usuário for encontrado
                     {
                         string email = "eduardo-sampaio@outlook.com";
                         string senha = "coxinha123";
@@ -88,7 +87,7 @@ namespace Controle
                         cliente.Credentials = new System.Net.NetworkCredential(email, senha);
                         cliente.DeliveryMethod = SmtpDeliveryMethod.Network;
 
-
+                        // Configura as informações do E-mail
                         MailMessage mail = new MailMessage();
                         mail.Sender = new MailAddress(email, "Laricão Hamburgueria");
                         mail.From = new MailAddress(email, "Recuperar senha");
@@ -99,6 +98,7 @@ namespace Controle
 
                         UsuarioModelo modelo = new UsuarioModelo();
                         UsuarioControle controle = new UsuarioControle();
+                        // Populo meu modelo para Editar a Senha
                         modelo.senha = senhanova;
                         modelo.id = Convert.ToInt32(dt.Rows[0][0].ToString());
                         modelo.nome = dt.Rows[0][1].ToString();
@@ -107,14 +107,16 @@ namespace Controle
                         modelo.tel = dt.Rows[0][4].ToString();
                         modelo.idperfil = Convert.ToInt32(dt.Rows[0][6].ToString());
                         modelo.email = dt.Rows[0][7].ToString();
+                        // Chama a função para editar a senha do Usuário
                         confirmar = controle.Editar(modelo);
+                        // Defino o Texto no corpo do E-mail
                         mail.Body = "Olá " + dt.Rows[0][1].ToString() + " sua senha é: " + senhanova;
                         mail.IsBodyHtml = true;//cria um arquivo html
                         try
                         {
-                            if (confirmar)
+                            if (confirmar) // Valida a Edição da Senha
                             {
-                                cliente.SendMailAsync(mail);
+                                cliente.SendMailAsync(mail); // Envia o E-Mail
                                 msg = "E-mail enviado com a nova senha";
                             }
                             else
@@ -140,8 +142,8 @@ namespace Controle
             }
 
         }
-        public void AttStatus(int status, int id)
-        { //testar a recuperacao
+        public void AttStatus(int status, int id) // Altera o Status do Pedido 
+        {
             try
             {
                 string msg = null;
@@ -212,10 +214,8 @@ namespace Controle
             }
 
         }
-        public List<int> Validacao(string sql)
+        public List<int> Validacao(string sql) // Retorna os itens do Carrinho em formato de List
         {
-            //conn é a conexão com o banco de dados
-
             MySqlConnection conn = GetConexao();
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -231,7 +231,7 @@ namespace Controle
             conn.Close();
             return valores;
         }
-        public bool ValidaCadastro(string email, string cpf)
+        public bool ValidaCadastro(string email, string cpf) // Valida se o e-mail ou cpf já está cadastrado
         {
             bool resultado = false;
             string sqlComando = $"select Count(*) from usuario where cpf = '{cpf}' or email = '{email}'";
@@ -240,7 +240,6 @@ namespace Controle
             sqlConexao.Open();
             MySqlCommand cmd = new MySqlCommand(sqlComando, sqlConexao);
 
-            //
             if (Convert.ToInt32(cmd.ExecuteScalar()) >= 1)
                 resultado = true;
 
@@ -248,7 +247,7 @@ namespace Controle
 
             return resultado;
         }
-        public bool Cls()
+        public bool Cls() // Limpa o banco de dados do Carrinho
         {
             bool resultado = false;
             string command = "truncate table carrinho";
@@ -262,8 +261,34 @@ namespace Controle
 
             con.Close();
 
-
             return resultado;
         }
+
+        public void LoadData(string qry, DataGridView dv, ListBox lb) // Popula as tabelas de Clientes e Produtos
+        {
+                MySqlConnection con = GetConexao(); 
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(qry, con);
+                cmd.CommandType = CommandType.Text;
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                for(int i = 0; i < lb.Items.Count; i++) // Define os dados para suas tabelas pré definidas
+                {
+                    string colName = ((DataGridViewColumn)lb.Items[i]).Name;
+                    dv.Columns[colName].DataPropertyName = dt.Columns[i].ToString();
+                }
+
+                dv.DataSource = dt;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                con.Close();
+            }
+        }
+
     }
 }

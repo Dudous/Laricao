@@ -29,179 +29,260 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.txtLogin = new System.Windows.Forms.TextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.btn_logar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblSenha = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.lblCadastro = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
+            this.btn_logar = new Guna.UI.WinForms.GunaButton();
+            this.btnRec = new Guna.UI.WinForms.GunaButton();
+            this.btnCad = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.txtLogin = new Guna.UI.WinForms.GunaTextBox();
+            this.txtSenha = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            this.ctlClose = new Guna.UI.WinForms.GunaControlBox();
+            this.lblhelp = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtLogin
-            // 
-            this.txtLogin.Location = new System.Drawing.Point(47, 102);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(171, 20);
-            this.txtLogin.TabIndex = 0;
-            this.txtLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLogin_KeyDown);
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Location = new System.Drawing.Point(47, 158);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(171, 20);
-            this.txtSenha.TabIndex = 1;
-            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLogin_KeyDown);
             // 
             // btn_logar
             // 
-            this.btn_logar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btn_logar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_logar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_logar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_logar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_logar.Location = new System.Drawing.Point(47, 207);
+            this.btn_logar.AnimationHoverSpeed = 0.07F;
+            this.btn_logar.AnimationSpeed = 0.03F;
+            this.btn_logar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_logar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btn_logar.BorderColor = System.Drawing.Color.Black;
+            this.btn_logar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_logar.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_logar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_logar.ForeColor = System.Drawing.Color.White;
+            this.btn_logar.Image = null;
+            this.btn_logar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_logar.Location = new System.Drawing.Point(695, 298);
             this.btn_logar.Name = "btn_logar";
-            this.btn_logar.Size = new System.Drawing.Size(171, 31);
-            this.btn_logar.TabIndex = 2;
+            this.btn_logar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_logar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_logar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_logar.OnHoverImage = null;
+            this.btn_logar.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_logar.Radius = 5;
+            this.btn_logar.Size = new System.Drawing.Size(160, 31);
+            this.btn_logar.TabIndex = 3;
             this.btn_logar.Text = "Entrar";
-            this.btn_logar.UseVisualStyleBackColor = false;
-            this.btn_logar.Click += new System.EventHandler(this.btn_logar_Click);
+            this.btn_logar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_logar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
-            // label1
+            // btnRec
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Login";
+            this.btnRec.AnimationHoverSpeed = 0.07F;
+            this.btnRec.AnimationSpeed = 0.03F;
+            this.btnRec.BackColor = System.Drawing.Color.Transparent;
+            this.btnRec.BaseColor = System.Drawing.Color.White;
+            this.btnRec.BorderColor = System.Drawing.Color.Black;
+            this.btnRec.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRec.FocusedColor = System.Drawing.Color.Empty;
+            this.btnRec.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnRec.Image = null;
+            this.btnRec.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnRec.Location = new System.Drawing.Point(695, 372);
+            this.btnRec.Name = "btnRec";
+            this.btnRec.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnRec.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnRec.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnRec.OnHoverImage = null;
+            this.btnRec.OnPressedColor = System.Drawing.Color.Black;
+            this.btnRec.Radius = 5;
+            this.btnRec.Size = new System.Drawing.Size(160, 31);
+            this.btnRec.TabIndex = 0;
+            this.btnRec.Text = "Recuperar senha";
+            this.btnRec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnRec.Click += new System.EventHandler(this.btnRec_Click);
             // 
-            // label2
+            // btnCad
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Senha";
+            this.btnCad.AnimationHoverSpeed = 0.07F;
+            this.btnCad.AnimationSpeed = 0.03F;
+            this.btnCad.BackColor = System.Drawing.Color.Transparent;
+            this.btnCad.BaseColor = System.Drawing.Color.White;
+            this.btnCad.BorderColor = System.Drawing.Color.Black;
+            this.btnCad.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCad.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCad.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnCad.Image = null;
+            this.btnCad.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnCad.Location = new System.Drawing.Point(695, 335);
+            this.btnCad.Name = "btnCad";
+            this.btnCad.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnCad.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCad.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCad.OnHoverImage = null;
+            this.btnCad.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCad.Radius = 5;
+            this.btnCad.Size = new System.Drawing.Size(160, 31);
+            this.btnCad.TabIndex = 12;
+            this.btnCad.Text = "Cadastrar-se";
+            this.btnCad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCad.Click += new System.EventHandler(this.btnCad_Click);
             // 
-            // lblSenha
+            // gunaLabel1
             // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.BackColor = System.Drawing.SystemColors.Control;
-            this.lblSenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblSenha.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblSenha.Location = new System.Drawing.Point(83, 300);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(102, 13);
-            this.lblSenha.TabIndex = 6;
-            this.lblSenha.Text = "Esqueceu a senha?";
-            this.lblSenha.Click += new System.EventHandler(this.lblSenha_Click);
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(633, 29);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(51, 30);
+            this.gunaLabel1.TabIndex = 0;
+            this.gunaLabel1.Text = "Olá!";
             // 
-            // label4
+            // gunaLabel3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 264);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "------------------------ OU ------------------------ ";
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaLabel3.Location = new System.Drawing.Point(633, 59);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(118, 30);
+            this.gunaLabel3.TabIndex = 16;
+            this.gunaLabel3.Text = "Bem-vindo";
             // 
-            // panel2
+            // gunaLabel2
             // 
-            this.panel2.Controls.Add(this.btnSair);
-            this.panel2.Controls.Add(this.lblCadastro);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btn_logar);
-            this.panel2.Controls.Add(this.lblSenha);
-            this.panel2.Controls.Add(this.txtSenha);
-            this.panel2.Controls.Add(this.txtLogin);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(517, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(268, 411);
-            this.panel2.TabIndex = 4;
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaLabel2.Location = new System.Drawing.Point(690, 146);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(147, 30);
+            this.gunaLabel2.TabIndex = 17;
+            this.gunaLabel2.Text = "Faça seu login";
             // 
-            // btnSair
+            // txtLogin
             // 
-            this.btnSair.BackColor = System.Drawing.Color.Transparent;
-            this.btnSair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSair.BackgroundImage")));
-            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSair.FlatAppearance.BorderSize = 0;
-            this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSair.Location = new System.Drawing.Point(235, 3);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(30, 18);
-            this.btnSair.TabIndex = 9;
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click_1);
+            this.txtLogin.BackColor = System.Drawing.Color.Transparent;
+            this.txtLogin.BaseColor = System.Drawing.Color.Silver;
+            this.txtLogin.BorderColor = System.Drawing.Color.Transparent;
+            this.txtLogin.BorderSize = 0;
+            this.txtLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLogin.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtLogin.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtLogin.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLogin.Location = new System.Drawing.Point(695, 208);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.PasswordChar = '\0';
+            this.txtLogin.Radius = 15;
+            this.txtLogin.SelectedText = "";
+            this.txtLogin.Size = new System.Drawing.Size(160, 30);
+            this.txtLogin.TabIndex = 1;
+            this.txtLogin.Text = "Login";
+            this.txtLogin.Enter += new System.EventHandler(this.Login_Enter);
+            this.txtLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLogin_KeyDown);
+            this.txtLogin.Leave += new System.EventHandler(this.Login_Leave);
             // 
-            // lblCadastro
+            // txtSenha
             // 
-            this.lblCadastro.AutoSize = true;
-            this.lblCadastro.BackColor = System.Drawing.SystemColors.Control;
-            this.lblCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCadastro.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblCadastro.Location = new System.Drawing.Point(98, 329);
-            this.lblCadastro.Name = "lblCadastro";
-            this.lblCadastro.Size = new System.Drawing.Size(63, 13);
-            this.lblCadastro.TabIndex = 8;
-            this.lblCadastro.Text = "Cadastre-se";
-            this.lblCadastro.Click += new System.EventHandler(this.lblCadastro_Click);
+            this.txtSenha.BackColor = System.Drawing.Color.Transparent;
+            this.txtSenha.BaseColor = System.Drawing.Color.Silver;
+            this.txtSenha.BorderColor = System.Drawing.Color.Transparent;
+            this.txtSenha.BorderSize = 0;
+            this.txtSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSenha.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtSenha.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtSenha.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSenha.Location = new System.Drawing.Point(695, 244);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Radius = 15;
+            this.txtSenha.SelectedText = "";
+            this.txtSenha.Size = new System.Drawing.Size(160, 30);
+            this.txtSenha.TabIndex = 2;
+            this.txtSenha.Text = "Senha";
+            this.txtSenha.Enter += new System.EventHandler(this.Senha_Enter);
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLogin_KeyDown);
+            this.txtSenha.Leave += new System.EventHandler(this.Senha_Leave);
             // 
-            // panel1
+            // gunaPictureBox1
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(520, 411);
-            this.panel1.TabIndex = 3;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::Laricão.Properties.Resources.LARICÃO__1_;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(-3, -1);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(610, 569);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox1.TabIndex = 20;
+            this.gunaPictureBox1.TabStop = false;
+            // 
+            // ctlClose
+            // 
+            this.ctlClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctlClose.AnimationHoverSpeed = 0.07F;
+            this.ctlClose.AnimationSpeed = 0.03F;
+            this.ctlClose.IconColor = System.Drawing.Color.Black;
+            this.ctlClose.IconSize = 15F;
+            this.ctlClose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ctlClose.Location = new System.Drawing.Point(902, -1);
+            this.ctlClose.Name = "ctlClose";
+            this.ctlClose.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.ctlClose.OnHoverIconColor = System.Drawing.Color.White;
+            this.ctlClose.OnPressedColor = System.Drawing.Color.Black;
+            this.ctlClose.Size = new System.Drawing.Size(45, 29);
+            this.ctlClose.TabIndex = 21;
+            this.ctlClose.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // lblhelp
+            // 
+            this.lblhelp.AutoSize = true;
+            this.lblhelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.lblhelp.Location = new System.Drawing.Point(741, 503);
+            this.lblhelp.Name = "lblhelp";
+            this.lblhelp.Size = new System.Drawing.Size(96, 13);
+            this.lblhelp.TabIndex = 22;
+            this.lblhelp.Text = "Precisa de Ajuda ?";
+            this.lblhelp.Click += new System.EventHandler(this.Ajuda);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 411);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(947, 548);
+            this.Controls.Add(this.lblhelp);
+            this.Controls.Add(this.ctlClose);
+            this.Controls.Add(this.gunaPictureBox1);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.gunaLabel2);
+            this.Controls.Add(this.gunaLabel3);
+            this.Controls.Add(this.gunaLabel1);
+            this.Controls.Add(this.btnCad);
+            this.Controls.Add(this.btnRec);
+            this.Controls.Add(this.btn_logar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtLogin;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Button btn_logar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblCadastro;
-        private System.Windows.Forms.Button btnSair;
+        private Guna.UI.WinForms.GunaButton btn_logar;
+        private Guna.UI.WinForms.GunaButton btnRec;
+        private Guna.UI.WinForms.GunaButton btnCad;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaTextBox txtLogin;
+        private Guna.UI.WinForms.GunaTextBox txtSenha;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
+        private Guna.UI.WinForms.GunaControlBox ctlClose;
+        private System.Windows.Forms.Label lblhelp;
     }
 }
 

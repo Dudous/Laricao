@@ -19,6 +19,8 @@ namespace Modelo
         public string status { get; set; }
         public string json { get; set; }
         public string obs { get; set; }
+        public int pag {  get; set; }
+        public string pagamento { get; set; }
 
     }
 }

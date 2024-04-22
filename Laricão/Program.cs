@@ -19,5 +19,6 @@ namespace Laricão
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
         }
+
     }
 }

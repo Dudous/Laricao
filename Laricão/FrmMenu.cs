@@ -1,13 +1,9 @@
-﻿using LaricãoHamburgueria;
+﻿using Controle;
+using LaricãoHamburgueria;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Laricão
@@ -16,86 +12,103 @@ namespace Laricão
     {
         PrivateFontCollection pfc = new PrivateFontCollection();
         int perfilusuario;
-        int id;
-        public FrmMenu(int idusuario, int perfil)
+
+        public FrmMenu()
         {
             InitializeComponent();
 
-            perfilusuario = perfil;
-            if (perfilusuario == 1)
+            perfilusuario = UsuarioControle.perfil;
+            if (perfilusuario != 2)
             {
-                btn_clientes.Visible = false;
+                btnClientes.Visible = false;
+                BtnProdutos.Visible = false;
             }
-            id = idusuario;
+
+        }
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            pfc.AddFontFile("E:\\Laricao\\img\\Gluten.ttf");
+            Font padrao = new Font(pfc.Families[0], 16, FontStyle.Regular);
+            label1.Font = padrao;
+            label2.Font = padrao;
+            label3.Font = padrao;
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
-               FrmCardapio Cardapio = new FrmCardapio(id, perfilusuario);
-               this.Hide();
-               Cardapio.ShowDialog();
-
+            Application.Exit();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void AddControls(Form f)
         {
-                pfc.AddFontFile("E:\\Laricao\\img\\Gluten.ttf");
-                Font padrao = new Font(pfc.Families[0], 16, FontStyle.Regular);
-                label1.Font = padrao;
-                btn_cardapio.Font = padrao;
-                btn_clientes.Font = padrao;
-                button2.Font = padrao;
-                button3.Font = padrao;
-                button5.Font = padrao;
+            CenterPanel.Controls.Clear();
+            f.Dock = DockStyle.Fill;
+            f.TopLevel = false;
+            CenterPanel.Controls.Add(f);
+            f.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnCardapio_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Deseja mesmo sair", "Laricão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            AddControls(new FrmCardapio());
+        }
+
+        private void btnCarrinho_Click(object sender, EventArgs e)
+        {
+            AddControls(new FrmCarrinho());
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            AddControls(new FrmPedidos());
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            AddControls(new FrmHome());
+        }
+
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            AddControls(new FrmClientes());
+        }
+
+        private void BtnProdutos_Click(object sender, EventArgs e)
+        {
+            AddControls(new FrmProduto());
+        }
+
+        private void btnLogoff_Click(object sender, EventArgs e)
+        {
+            DialogResult excluir = MessageBox.Show("Tem certeza que deseja Sair?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (excluir == DialogResult.Yes)
             {
-                Application.Exit();
+                Login login = new Login();
+                this.Hide();
+                login.Show();
             }
         }
-
-        private void btn_clientes_Click(object sender, EventArgs e)
+        private void Ajuda(object sender, EventArgs e)
         {
-            FrmClientes clientes = new FrmClientes(id, perfilusuario);
-            this.Hide();
-            clientes.ShowDialog();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-            FrmMenu Menu = new FrmMenu(id, perfilusuario);
-            this.Hide();
-            Menu.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            FrmCarrinho carrinho = new FrmCarrinho(id, perfilusuario);
-            this.Hide();
-            carrinho.ShowDialog();  
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            FrmPedidos pedidos = new FrmPedidos(id, perfilusuario);
-            this.Hide();
-            pedidos.ShowDialog();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Login loginForm = new Login();
-
-            // Exibir o formulário de login
-            loginForm.Show();
-
-            // Fechar o formulário atual (menu ou qualquer outra página)
-            this.Close();
+            try
+            {
+                string caminhopdf = "E:\\Laricao\\manual\\Manual-sistema.pdf";
+                if (System.IO.File.Exists(caminhopdf))
+                {
+                    Process.Start(caminhopdf);
+                }
+                else
+                {
+                    MessageBox.Show("Arquivo de Ajuda não encontrado");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+            }
         }
     }
 }

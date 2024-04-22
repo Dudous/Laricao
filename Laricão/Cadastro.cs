@@ -1,4 +1,5 @@
 ﻿using Controle;
+using Laricão.Properties;
 using LaricãoHamburgueria;
 using Modelo;
 using System;
@@ -21,12 +22,12 @@ namespace Laricão
 
         private void Cadastro_Load(object sender, EventArgs e)
         {
-            pfc.AddFontFile("E:\\Laricao\\img\\Gluten.ttf");
+            pfc.AddFontFile("E:\\Laricao\\img\\gluten.ttf");
             Font padrao = new Font(pfc.Families[0], 16, FontStyle.Regular);
             label6.Font = padrao;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnRegistro_Click(object sender, EventArgs e)
         {
 
             if (TextBoxVazias())
@@ -40,10 +41,8 @@ namespace Laricão
                 usuario.email = txtemail.Text;
                 usuario.tel = txttel.Text;
                 usuario.senha = txtsenha.Text;
-                usuario.idperfil = 1;
+                usuario.idperfil = UsuarioControle.perfil;
 
-                string sql = $"select *from usuario where cpf = {usuario.cpf}";
-                string sqlmail = $"select *from usuario where cpf = {usuario.email}";
 
                 if (!controle.ValidarCPF(usuario.cpf))
                     MessageBox.Show("CPF inválido");
@@ -136,6 +135,18 @@ namespace Laricão
         }
 
         private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+        }
+
+        private void gunaControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

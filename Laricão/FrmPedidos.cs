@@ -24,22 +24,22 @@ namespace Laricão
         bool validacao = false;
         string SqlComando = null;
 
-        public FrmPedidos(int idusuario, int perfil)
+        public FrmPedidos()
         {
             InitializeComponent();
             pfc.AddFontFile("E:\\laricao\\img\\Gluten.ttf");
-            label1.Font = new Font(pfc.Families[0], 16, FontStyle.Regular);
-            perfiluser = perfil;
-            id = idusuario;
+
+            perfiluser = UsuarioControle.perfil;
+            id = UsuarioControle.id;
         }
 
         private void FrmPedidos_Load(object sender, EventArgs e)
 
         {
-            if (perfiluser == 2)
-                SqlComando = "Select * from pedidos";
+            if (perfiluser == 2 || perfiluser == 3)
+                SqlComando = "SELECT pedidos.id_pedido, pedidos.Nome, pedidos.idusuario, pedidos.cep, pedidos.bairro, pedidos.endereco, pedidos.num, pedidos.tel, pedidos.status, pedidos.pedido, pedidos.obs, pagamento.pag from pedidos inner join pagamento on pedidos.pagamento = pagamento.id";
             else
-                SqlComando = $"Select * from pedidos where idusuario = {id}";
+                SqlComando = $"SELECT pedidos.id_pedido, pedidos.Nome, pedidos.idusuario, pedidos.cep, pedidos.bairro, pedidos.endereco, pedidos.num, pedidos.tel, pedidos.status, pedidos.pedido, pedidos.obs, pagamento.pag from pedidos inner join pagamento on pedidos.pagamento = pagamento.id where pedidos.idusuario = {id}";
 
             DataTable dt = new DataTable();
 
@@ -60,7 +60,10 @@ namespace Laricão
                     tel = row["tel"].ToString(),
                     status = row["status"].ToString(),
                     json = row["pedido"].ToString(),
-                    obs = row["obs"].ToString()
+                    obs = row["obs"].ToString(),
+                    pagamento = row["pag"].ToString()
+
+
                 };
                 pedidos.Add(pedido);
             }
@@ -102,7 +105,7 @@ namespace Laricão
                     produto.BorderStyle = BorderStyle.FixedSingle;
                     produto.Location = new Point(10, y[registros]);
                     produto.Height = 120;
-                    produto.Width = 485;
+                    produto.Width = 580;
                     produto.Click += new EventHandler((sender1, e1) => panelClick(sender1, e1, produto, Convert.ToInt32(Id.Text)));
 
                     Label Cod = new Label();
@@ -128,7 +131,7 @@ namespace Laricão
                     status.Location = new Point(20, 80);
                     status.Font = new Font(pfc.Families[0], 9, FontStyle.Regular);
                     status.Click += new EventHandler((sender1, e1) => panelClick(sender1, e1, produto, Convert.ToInt32(Id.Text)));
-                    if(status.Text == "Pedido Finalizado")
+                    if (status.Text == "Pedido Finalizado")
                     {
                         PictureBox img = new PictureBox();
                         img.Image = Image.FromFile("E:/Laricao/img/check-mark.png");
@@ -194,6 +197,23 @@ namespace Laricão
                     produto.Controls.Add(obs);
                     pos += 25;
 
+                    Label pagamento = new Label();
+                    pagamento.Name = "Pagamento";
+                    pagamento.Text = "Pagamento: ";
+                    pagamento.Width = 85;
+                    pagamento.Location = new Point(20, pos); // Adjust the position as needed
+                    pagamento.Font = new Font(pfc.Families[0], 9, FontStyle.Bold);
+                    produto.Controls.Add(pagamento);                    
+                    
+                    Label pag = new Label();
+                    pag.Name = "Pag";
+                    pag.Text = item.pagamento.ToString();
+                    pag.Width = Width;
+                    pag.Location = new Point(105, pos); // Adjust the position as needed
+                    pag.Font = new Font(pfc.Families[0], 9, FontStyle.Regular);
+                    produto.Controls.Add(pag);
+                    pos += 35;
+
                     Label endereco = new Label();
                     endereco.Name = "Endereço";
                     endereco.Text = "Endereço:";
@@ -208,14 +228,15 @@ namespace Laricão
                     end.Width = Width;
                     end.Location = new Point(85, pos);
                     produto.Controls.Add(end);
-                    pos += 25;
+                    pos += 40;
 
                     if (perfiluser == 2)
                     {
                         Button aceitar = new Button();
                         aceitar.Name = "Aceitar Pedido";
                         aceitar.Text = "Aceitar Pedido";
-                        aceitar.Width = 200;
+                        aceitar.Width = 150;
+                        aceitar.Height = 30;
                         aceitar.Location = new Point(20, pos);
                         aceitar.BackColor = Color.LightGreen;
                         aceitar.FlatStyle = FlatStyle.Flat;
@@ -225,20 +246,20 @@ namespace Laricão
                         Button recusar = new Button();
                         recusar.Name = "Recusar Pedido";
                         recusar.Text = "Recusar Pedido";
-                        recusar.Width = 200;
-                        recusar.Location = new Point(240, pos);
+                        recusar.Width = 150;
+                        recusar.Height = 30;
+                        recusar.Location = new Point(200, pos);
                         recusar.BackColor = Color.LightCoral;
                         recusar.FlatStyle = FlatStyle.Flat;
                         recusar.Click += new EventHandler((sender1, e1) => ButtonClick(sender1, e1, Convert.ToInt32(item.Id), 2));
                         produto.Controls.Add(recusar);
 
-                        pos += 30;
-                        
                         Button finalizar = new Button();
                         finalizar.Name = "Finalizar Pedido";
                         finalizar.Text = "Finalizar Pedido";
-                        finalizar.Width = 200;
-                        finalizar.Location = new Point(120, pos);
+                        finalizar.Width = 150;
+                        finalizar.Height = 30;
+                        finalizar.Location = new Point(380, pos);
                         finalizar.BackColor = Color.LightBlue;
                         finalizar.FlatStyle = FlatStyle.Flat;
                         finalizar.Click += new EventHandler((sender1, e1) => ButtonClick(sender1, e1, Convert.ToInt32(item.Id), 3));
@@ -263,7 +284,7 @@ namespace Laricão
                 msg.Text = "Não Há Pedidos";
                 msg.Width = Width;
                 msg.Font = new Font(pfc.Families[0], 13, FontStyle.Bold);
-                msg.Location = new Point(400, 225);
+                msg.Location = new Point(500, 325);
                 PnlPedidos.Controls.Add(msg);
             }
         }
@@ -272,7 +293,7 @@ namespace Laricão
         {
             if (MessageBox.Show("Deseja mesmo voltar ao menu?", "Laricão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                FrmMenu Menu = new FrmMenu(id, perfiluser);
+                FrmMenu Menu = new FrmMenu();
 
                 this.Hide();
                 Menu.ShowDialog();
@@ -283,17 +304,18 @@ namespace Laricão
         {
             if (produto.Height == 120 && validacao == false)
             {
-                produto.Location = new Point(510, 0);
-                produto.Height = 460;
+                produto.Location = new Point(610, 0);
+                produto.Height = 500;
                 validacao = true;
             }
-            else if (produto.Height == 460)
+            else if (produto.Height == 500)
             {
                 validacao = false;
                 produto.Location = new Point(10, y[pos]);
                 produto.Height = 120;
             }
         }
+
 
         private void ButtonClick(object sender, EventArgs e, int cod, int op)
         {

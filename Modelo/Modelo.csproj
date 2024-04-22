@@ -115,6 +115,7 @@
   <ItemGroup>
     <Compile Include="ModeloProduto.cs" />
     <Compile Include="PedidoModelo.cs" />
+    <Compile Include="ProdutoModelo.cs" />
     <Compile Include="UsuarioModelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

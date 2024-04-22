@@ -318,3 +318,131 @@ C:\Users\aluno\Desktop\Laricao\Controle\bin\Debug\System.Text.Json.xml
 C:\Users\aluno\Desktop\Laricao\Controle\bin\Debug\System.ValueTuple.xml
 C:\Users\aluno\Desktop\Laricao\Controle\bin\Debug\de\PdfSharp.resources.dll
 C:\Users\aluno\Desktop\Laricao\Controle\bin\Debug\de\PdfSharp.Charting.resources.dll
+E:\larica guna\Laricao\Controle\bin\Debug\Controle.dll.config
+E:\larica guna\Laricao\Controle\bin\Debug\Controle.dll
+E:\larica guna\Laricao\Controle\bin\Debug\Controle.pdb
+E:\larica guna\Laricao\Controle\bin\Debug\BouncyCastle.Crypto.dll
+E:\larica guna\Laricao\Controle\bin\Debug\Correios.dll
+E:\larica guna\Laricao\Controle\bin\Debug\Google.Protobuf.dll
+E:\larica guna\Laricao\Controle\bin\Debug\K4os.Compression.LZ4.dll
+E:\larica guna\Laricao\Controle\bin\Debug\K4os.Compression.LZ4.Streams.dll
+E:\larica guna\Laricao\Controle\bin\Debug\K4os.Hash.xxHash.dll
+E:\larica guna\Laricao\Controle\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+E:\larica guna\Laricao\Controle\bin\Debug\Modelo.dll
+E:\larica guna\Laricao\Controle\bin\Debug\MySql.Data.dll
+E:\larica guna\Laricao\Controle\bin\Debug\Newtonsoft.Json.dll
+E:\larica guna\Laricao\Controle\bin\Debug\PdfSharp.Charting.dll
+E:\larica guna\Laricao\Controle\bin\Debug\PdfSharp.dll
+E:\larica guna\Laricao\Controle\bin\Debug\System.Buffers.dll
+E:\larica guna\Laricao\Controle\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\larica guna\Laricao\Controle\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\larica guna\Laricao\Controle\bin\Debug\System.IO.Pipelines.dll
+E:\larica guna\Laricao\Controle\bin\Debug\System.Memory.dll
+E:\larica guna\Laricao\Controle\bin\Debug\System.Numerics.Vectors.dll
+E:\larica guna\Laricao\Controle\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\larica guna\Laricao\Controle\bin\Debug\System.Text.Encodings.Web.dll
+E:\larica guna\Laricao\Controle\bin\Debug\System.Text.Json.dll
+E:\larica guna\Laricao\Controle\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\larica guna\Laricao\Controle\bin\Debug\System.ValueTuple.dll
+E:\larica guna\Laricao\Controle\bin\Debug\ZstdSharp.dll
+E:\larica guna\Laricao\Controle\bin\Debug\Modelo.pdb
+E:\larica guna\Laricao\Controle\bin\Debug\Modelo.dll.config
+E:\larica guna\Laricao\Controle\bin\Debug\BouncyCastle.Crypto.xml
+E:\larica guna\Laricao\Controle\bin\Debug\Correios.pdb
+E:\larica guna\Laricao\Controle\bin\Debug\Google.Protobuf.pdb
+E:\larica guna\Laricao\Controle\bin\Debug\Google.Protobuf.xml
+E:\larica guna\Laricao\Controle\bin\Debug\K4os.Compression.LZ4.xml
+E:\larica guna\Laricao\Controle\bin\Debug\K4os.Compression.LZ4.Streams.xml
+E:\larica guna\Laricao\Controle\bin\Debug\K4os.Hash.xxHash.xml
+E:\larica guna\Laricao\Controle\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+E:\larica guna\Laricao\Controle\bin\Debug\MySql.Data.xml
+E:\larica guna\Laricao\Controle\bin\Debug\Newtonsoft.Json.xml
+E:\larica guna\Laricao\Controle\bin\Debug\PdfSharp.xml
+E:\larica guna\Laricao\Controle\bin\Debug\PdfSharp.Charting.xml
+E:\larica guna\Laricao\Controle\bin\Debug\System.Buffers.xml
+E:\larica guna\Laricao\Controle\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\larica guna\Laricao\Controle\bin\Debug\System.IO.Pipelines.xml
+E:\larica guna\Laricao\Controle\bin\Debug\System.Memory.xml
+E:\larica guna\Laricao\Controle\bin\Debug\System.Numerics.Vectors.xml
+E:\larica guna\Laricao\Controle\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\larica guna\Laricao\Controle\bin\Debug\System.Text.Encodings.Web.xml
+E:\larica guna\Laricao\Controle\bin\Debug\System.Text.Json.xml
+E:\larica guna\Laricao\Controle\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\larica guna\Laricao\Controle\bin\Debug\System.ValueTuple.xml
+E:\larica guna\Laricao\Controle\bin\Debug\de\PdfSharp.resources.dll
+E:\larica guna\Laricao\Controle\bin\Debug\de\PdfSharp.Charting.resources.dll
+E:\larica guna\Laricao\Controle\obj\Debug\Controle.csproj.AssemblyReference.cache
+E:\larica guna\Laricao\Controle\obj\Debug\Controle.csproj.CoreCompileInputs.cache
+E:\larica guna\Laricao\Controle\obj\Debug\Controle.csproj.CopyComplete
+E:\larica guna\Laricao\Controle\obj\Debug\Controle.dll
+E:\larica guna\Laricao\Controle\obj\Debug\Controle.pdb
+E:\Backup\Laricao\Controle\bin\Debug\PdfSharp.Charting.dll
+E:\Backup\Laricao\Controle\bin\Debug\PdfSharp.dll
+E:\Backup\Laricao\Controle\bin\Debug\System.Text.Encodings.Web.dll
+E:\Backup\Laricao\Controle\bin\Debug\System.Text.Json.dll
+E:\Backup\Laricao\Controle\bin\Debug\System.ValueTuple.dll
+E:\Backup\Laricao\Controle\bin\Debug\PdfSharp.xml
+E:\Backup\Laricao\Controle\bin\Debug\PdfSharp.Charting.xml
+E:\Backup\Laricao\Controle\bin\Debug\System.Text.Encodings.Web.xml
+E:\Backup\Laricao\Controle\bin\Debug\System.Text.Json.xml
+E:\Backup\Laricao\Controle\bin\Debug\System.ValueTuple.xml
+E:\Backup\Laricao\Controle\bin\Debug\de\PdfSharp.resources.dll
+E:\Backup\Laricao\Controle\bin\Debug\de\PdfSharp.Charting.resources.dll
+F:\larica guna\Laricao\Controle\bin\Debug\Controle.dll.config
+F:\larica guna\Laricao\Controle\bin\Debug\Controle.dll
+F:\larica guna\Laricao\Controle\bin\Debug\Controle.pdb
+F:\larica guna\Laricao\Controle\bin\Debug\BouncyCastle.Crypto.dll
+F:\larica guna\Laricao\Controle\bin\Debug\Correios.dll
+F:\larica guna\Laricao\Controle\bin\Debug\Google.Protobuf.dll
+F:\larica guna\Laricao\Controle\bin\Debug\K4os.Compression.LZ4.dll
+F:\larica guna\Laricao\Controle\bin\Debug\K4os.Compression.LZ4.Streams.dll
+F:\larica guna\Laricao\Controle\bin\Debug\K4os.Hash.xxHash.dll
+F:\larica guna\Laricao\Controle\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+F:\larica guna\Laricao\Controle\bin\Debug\Modelo.dll
+F:\larica guna\Laricao\Controle\bin\Debug\MySql.Data.dll
+F:\larica guna\Laricao\Controle\bin\Debug\Newtonsoft.Json.dll
+F:\larica guna\Laricao\Controle\bin\Debug\PdfSharp.Charting.dll
+F:\larica guna\Laricao\Controle\bin\Debug\PdfSharp.dll
+F:\larica guna\Laricao\Controle\bin\Debug\System.Buffers.dll
+F:\larica guna\Laricao\Controle\bin\Debug\System.Configuration.ConfigurationManager.dll
+F:\larica guna\Laricao\Controle\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+F:\larica guna\Laricao\Controle\bin\Debug\System.IO.Pipelines.dll
+F:\larica guna\Laricao\Controle\bin\Debug\System.Memory.dll
+F:\larica guna\Laricao\Controle\bin\Debug\System.Numerics.Vectors.dll
+F:\larica guna\Laricao\Controle\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\larica guna\Laricao\Controle\bin\Debug\System.Text.Encodings.Web.dll
+F:\larica guna\Laricao\Controle\bin\Debug\System.Text.Json.dll
+F:\larica guna\Laricao\Controle\bin\Debug\System.Threading.Tasks.Extensions.dll
+F:\larica guna\Laricao\Controle\bin\Debug\System.ValueTuple.dll
+F:\larica guna\Laricao\Controle\bin\Debug\ZstdSharp.dll
+F:\larica guna\Laricao\Controle\bin\Debug\Modelo.pdb
+F:\larica guna\Laricao\Controle\bin\Debug\Modelo.dll.config
+F:\larica guna\Laricao\Controle\bin\Debug\BouncyCastle.Crypto.xml
+F:\larica guna\Laricao\Controle\bin\Debug\Correios.pdb
+F:\larica guna\Laricao\Controle\bin\Debug\Google.Protobuf.pdb
+F:\larica guna\Laricao\Controle\bin\Debug\Google.Protobuf.xml
+F:\larica guna\Laricao\Controle\bin\Debug\K4os.Compression.LZ4.xml
+F:\larica guna\Laricao\Controle\bin\Debug\K4os.Compression.LZ4.Streams.xml
+F:\larica guna\Laricao\Controle\bin\Debug\K4os.Hash.xxHash.xml
+F:\larica guna\Laricao\Controle\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+F:\larica guna\Laricao\Controle\bin\Debug\MySql.Data.xml
+F:\larica guna\Laricao\Controle\bin\Debug\Newtonsoft.Json.xml
+F:\larica guna\Laricao\Controle\bin\Debug\PdfSharp.xml
+F:\larica guna\Laricao\Controle\bin\Debug\PdfSharp.Charting.xml
+F:\larica guna\Laricao\Controle\bin\Debug\System.Buffers.xml
+F:\larica guna\Laricao\Controle\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+F:\larica guna\Laricao\Controle\bin\Debug\System.IO.Pipelines.xml
+F:\larica guna\Laricao\Controle\bin\Debug\System.Memory.xml
+F:\larica guna\Laricao\Controle\bin\Debug\System.Numerics.Vectors.xml
+F:\larica guna\Laricao\Controle\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+F:\larica guna\Laricao\Controle\bin\Debug\System.Text.Encodings.Web.xml
+F:\larica guna\Laricao\Controle\bin\Debug\System.Text.Json.xml
+F:\larica guna\Laricao\Controle\bin\Debug\System.Threading.Tasks.Extensions.xml
+F:\larica guna\Laricao\Controle\bin\Debug\System.ValueTuple.xml
+F:\larica guna\Laricao\Controle\bin\Debug\de\PdfSharp.resources.dll
+F:\larica guna\Laricao\Controle\bin\Debug\de\PdfSharp.Charting.resources.dll
+F:\larica guna\Laricao\Controle\obj\Debug\Controle.csproj.AssemblyReference.cache
+F:\larica guna\Laricao\Controle\obj\Debug\Controle.csproj.CoreCompileInputs.cache
+F:\larica guna\Laricao\Controle\obj\Debug\Controle.csproj.CopyComplete
+F:\larica guna\Laricao\Controle\obj\Debug\Controle.dll
+F:\larica guna\Laricao\Controle\obj\Debug\Controle.pdb
